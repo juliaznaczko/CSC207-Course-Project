@@ -14,14 +14,14 @@ public class UofTProgramScraper {
         String url = "https://www.utoronto.ca/academics/undergraduate-programs";
 
         try {
-            // 1️⃣ Load the web page from URL
+            // Load the web page from URL
             Document doc = Jsoup.connect(url)
                     .userAgent("Mozilla/5.0") // some sites require a user agent
                     .get();
 
             List<Map<String, Object>> programs = new ArrayList<>();
 
-            // 2️⃣ Select all program cards
+            // Select all program cards
             Elements cards = doc.select("div.card");
 
             for (Element card : cards) {
@@ -53,13 +53,13 @@ public class UofTProgramScraper {
                 programs.add(program);
             }
 
-            // 3️⃣ Write to JSON file
+            // Write to JSON file
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             try (FileWriter writer = new FileWriter("uoft_programs_stgeorge.json")) {
                 gson.toJson(programs, writer);
             }
 
-            System.out.println("✅ Saved " + programs.size() + " St. George programs to uoft_programs_stgeorge.json");
+            System.out.println("Saved " + programs.size() + " St. George programs to uoft_programs_stgeorge.json");
 
         } catch (IOException e) {
             e.printStackTrace();
