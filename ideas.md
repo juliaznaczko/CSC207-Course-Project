@@ -1,6 +1,6 @@
 General Description:
-A student-matching website based on their courseloads to take courses together. A student creates an account with their student UofT email, then uploads their current courseload from acorn. Based on a certain score calculation algorithm, the user will see either users that are the closest matches to their courseload.
-Additionally, the user can choose further filters for themselves (Gender, Year of Study, etc…) to find the most suitable match. The student will be able to send an invitation to their matches, and if the other student accepts it, they will be able to chat on the platform to discuss meeting plans.
+A way for Undergraduate UofT students to find other students similar to themselves and a way to connect with them. A student creates an account, enters information such as the courses they are taking, year of study, program(s), languages spoken and interests. This information is put into an algorithm which returns a list of student profiles with most to least relevant displayed. The user will also have to create a profile which includes information such as their name, bio, and prefered method of contact. 
+
 Implementation Details:
 User/Student:
 
